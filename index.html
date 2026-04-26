@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gonçalo Aleluia | Portfólio Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-high": "#1f1f1f", "secondary": "#9b9ea3", "surface-bright": "#2c2c2c",
+        "surface-container-lowest": "#000000", "surface-container-low": "#131313", "surface": "#0e0e0e",
+        "outline-variant": "#484848", "outline": "#757575", "on-secondary": "#1d2024",
+        "primary-container": "#454747", "surface-container": "#191919", "surface-variant": "#262626",
+        "on-primary": "#3f4041", "on-surface-variant": "#ababab", "on-background": "#e5e5e5",
+        "on-primary-container": "#d0d0d0", "primary": "#c6c6c7", "surface-container-highest": "#262626",
+        "background": "#0e0e0e", "on-surface": "#e5e5e5", "tertiary-fixed": "#f2f4f2",
+      },
+      fontFamily: { headline: ["Manrope","sans-serif"], body: ["Inter","sans-serif"], label: ["Inter","sans-serif"] },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+    },
+  },
+}
+</script>
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)), url('Imagens/fundo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #e5e5e5;
+}
+.glass-card { background: rgba(38,38,38,0.4); backdrop-filter: blur(12px); border: 1px solid rgba(72,72,72,0.15); }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl shadow-[0_0_64px_rgba(198,198,199,0.08)] flex justify-between items-center px-8 py-4">
+  <a href="index.html" class="text-xl font-bold tracking-tighter text-zinc-100 font-headline">Gonçalo Aleluia | Portfólio Digital</a>
+  <div class="hidden md:flex items-center space-x-8">
+    <a href="sobre-mim.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Sobre mim</a>
+    <a href="trabalhos.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Trabalhos Académicos</a>
+    <a href="estagio.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Estágio (Gestão de Redes)</a>
+    <a href="projetos-pessoais.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Projetos Pessoais</a>
+    <a href="contacto.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Contacto</a>
+  </div>
+  <button class="md:hidden text-primary" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+  </button>
+</nav>
+<div id="mobile-nav" class="hidden fixed top-[68px] left-0 w-full bg-black/95 backdrop-blur-xl z-40 flex flex-col p-8 space-y-6 border-t border-zinc-900">
+  <a href="sobre-mim.html" class="text-zinc-300 hover:text-white text-sm font-medium">Sobre mim</a>
+  <a href="trabalhos.html" class="text-zinc-300 hover:text-white text-sm font-medium">Trabalhos Académicos</a>
+  <a href="estagio.html" class="text-zinc-300 hover:text-white text-sm font-medium">Estágio (Gestão de Redes)</a>
+  <a href="projetos-pessoais.html" class="text-zinc-300 hover:text-white text-sm font-medium">Projetos Pessoais</a>
+  <a href="contacto.html" class="text-zinc-300 hover:text-white text-sm font-medium">Contacto</a>
+</div>
+
+<!-- Hero -->
+<main class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6 overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+  <div class="relative z-10 max-w-4xl w-full text-center">
+    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/20 mb-8 hover:scale-105 transition-transform">
+      <span class="text-primary text-xs font-bold tracking-widest uppercase flex items-center gap-2">
+        <span class="text-[10px]">◆</span> Portfólio Digital
+      </span>
+    </div>
+    <h1 class="font-headline font-extrabold text-5xl md:text-7xl lg:text-8xl tracking-tighter text-on-surface mb-8 leading-[0.9] drop-shadow-2xl">
+      Gonçalo Aleluia
+    </h1>
+    <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+      A transformar conceitos académicos em estratégias reais
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
+      <a href="sobre-mim.html" class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(198,198,199,0.3)] transition-all flex items-center justify-center gap-2 group">
+        Sobre mim (com CV)
+        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+      </a>
+      <a href="trabalhos.html" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-outline-variant/30 text-on-surface rounded-xl font-bold text-lg hover:bg-surface-bright transition-all">
+        Projetos
+      </a>
+    </div>
+    <div class="flex flex-col items-center gap-4 text-on-surface-variant/60 animate-bounce">
+      <span class="text-xs uppercase tracking-[0.3em] font-medium">Desliza para baixo</span>
+      <div class="w-6 h-10 rounded-full border border-outline-variant/40 flex justify-center p-1.5">
+        <div class="w-1 h-2 bg-primary rounded-full"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Bento Grid -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <a href="sobre-mim.html" class="glass-card p-8 rounded-xl flex flex-col justify-between min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+      <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+        <span class="material-symbols-outlined text-3xl">account_circle</span>
+      </div>
+      <div>
+        <h3 class="font-headline text-xl font-bold mb-2">Sobre mim</h3>
+        <p class="text-justify text-on-surface-variant text-sm leading-relaxed mb-6">Experiência profissional detalhada, formação académica e competências técnicas.</p>
+      </div>
+      <div class="flex items-center text-primary text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
+        Explorar <span class="material-symbols-outlined text-sm">north_east</span>
+      </div>
+    </a>
+    <a href="trabalhos.html" class="glass-card p-8 rounded-xl flex flex-col justify-between min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+      <div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-6">
+        <span class="material-symbols-outlined text-3xl">school</span>
+      </div>
+      <div>
+        <h3 class="font-headline text-xl font-bold mb-2">Trabalhos Académicos</h3>
+        <p class="text-justify text-on-surface-variant text-sm leading-relaxed mb-6">Uma seleção de projetos teóricos e práticos desenvolvidos durante o percurso universitário.</p>
+      </div>
+      <div class="flex items-center text-secondary text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
+        Portfólio <span class="material-symbols-outlined text-sm">north_east</span>
+      </div>
+    </a>
+    <a href="estagio.html" class="glass-card p-8 rounded-xl flex flex-col justify-between min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+      <div class="w-12 h-12 rounded-lg bg-zinc-500/10 flex items-center justify-center text-zinc-300 mb-6">
+        <span class="material-symbols-outlined text-3xl">grid_view</span>
+      </div>
+      <div>
+        <h3 class="font-headline text-xl font-bold mb-2">Estágio (Gestão de Redes)</h3>
+        <p class="text-justify text-on-surface-variant text-sm leading-relaxed mb-6">Estratégias digitais, criação de conteúdo e análise de métricas no mundo real.</p>
+      </div>
+      <div class="flex items-center text-zinc-300 text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
+        Case Study <span class="material-symbols-outlined text-sm">north_east</span>
+      </div>
+    </a>
+    <a href="projetos-pessoais.html" class="glass-card p-8 rounded-xl flex flex-col justify-between min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+      <div class="w-12 h-12 rounded-lg bg-tertiary-fixed/10 flex items-center justify-center text-tertiary-fixed mb-6">
+        <span class="material-symbols-outlined text-3xl">palette</span>
+      </div>
+      <div>
+        <h3 class="font-headline text-xl font-bold mb-2">Projetos Pessoais</h3>
+        <p class="text-justify text-on-surface-variant text-sm leading-relaxed mb-6">Onde a criatividade não tem limites. Explorações visuais, branding e arte digital.</p>
+      </div>
+      <div class="flex items-center text-tertiary-fixed text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
+        Galeria <span class="material-symbols-outlined text-sm">north_east</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-zinc-900 bg-black flex flex-col md:flex-row justify-between items-center px-12 gap-6">
+  <div class="font-light text-xs uppercase tracking-widest text-zinc-400">© Gonçalo Aleluia. Todos os direitos reservados.</div>
+  <div class="flex flex-wrap gap-6 justify-center md:justify-end">
+    <a href="https://www.linkedin.com/in/gonçaloaleluia/" class="font-light text-xs uppercase tracking-widest text-zinc-600 hover:text-zinc-100 transition-colors">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- Scroll Indicator -->
+<div class="fixed right-6 top-1/2 -translate-y-1/2 h-32 w-px bg-zinc-800 hidden lg:block">
+  <div class="absolute top-0 w-full bg-secondary h-1/3 shadow-[0_0_10px_rgba(155,158,163,0.5)]"></div>
+</div>
+</body>
+</html>

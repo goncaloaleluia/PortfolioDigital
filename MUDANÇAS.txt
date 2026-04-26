@@ -1,0 +1,29 @@
+COMPRAR DOMINIO gonçaloaleluia.pt
+
+TODO:
+Transformar "Gonçalo Aleluia | Portfólio Digital" num clicável para direcionar para a Home page
+Remover "Ver Currículo" do Header
+Remover "Behance" do rodapé
+Adicionar as ligações às diferentes páginas nos tópicos do final da página
+
+SOBRE MIM:
+Adicionar CV no botão "Descarregar Curriculo"
+Retirar do rodapé "Email"
+Confirmar para onde direciona o "Ver projetos"
+
+TRABALHOS ACADÉMICOS:
+Verificar se o "LER MAIS" direciona corretamente
+Mudar botão da Fabridoce e Roupa de cão. "ICON Link" + "Visitar Website"
+Adicionar pdf´s e sites nos botões dos trabalhos
+Eliminar  botão no header dos trabalhos académicos (envelope)
+Verificar se o botão no final da página está funcional "Voltar para Trabalhos Académicos"
+Meter online os sites do trabalho (googlesites)
+
+ESTÁGIO:
+Adicionar Seta nos carrosséis do instagram
+Remover Imagem dos comentários nas publicações sem comentários
+Remover Verificado do nome (se der)
+
+CONTACTO:
+Criar API para o email
+Remover Behance

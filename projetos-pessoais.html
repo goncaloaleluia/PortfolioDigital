@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gonçalo Aleluia | Portfólio Digital</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-container-high": "#1f1f1f", "secondary": "#9b9ea3", "surface-bright": "#2c2c2c",
+        "surface-container-lowest": "#000000", "surface-container-low": "#131313", "surface": "#0e0e0e",
+        "outline-variant": "#484848", "outline": "#757575", "on-secondary": "#1d2024",
+        "primary-container": "#454747", "surface-container": "#191919", "surface-variant": "#262626",
+        "on-primary": "#3f4041", "on-surface-variant": "#ababab", "on-background": "#e5e5e5",
+        "on-primary-container": "#d0d0d0", "primary": "#c6c6c7", "surface-container-highest": "#262626",
+        "background": "#0e0e0e", "on-surface": "#e5e5e5", "secondary-dim": "#9b9ea3",
+      },
+      fontFamily: { headline: ["Manrope","sans-serif"], body: ["Inter","sans-serif"], label: ["Inter","sans-serif"] },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+    },
+  },
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+.custom-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: start; }
+.aspect-1-1 { aspect-ratio: 1/1; }
+.aspect-4-5 { aspect-ratio: 4/5; }
+@media (max-width: 768px) { .custom-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+
+<!-- CORREÇÃO: min-h-screen flex flex-col para empurrar o footer para o fundo -->
+<body class="min-h-screen flex flex-col bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl shadow-[0_0_64px_rgba(198,198,199,0.08)] flex justify-between items-center px-8 py-4">
+  <a href="index.html" class="text-xl font-bold tracking-tighter text-zinc-100 font-headline">Gonçalo Aleluia | Portfólio Digital</a>
+  <div class="hidden md:flex items-center space-x-8">
+    <a href="sobre-mim.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Sobre mim</a>
+    <a href="trabalhos.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Trabalhos Académicos</a>
+    <a href="estagio.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Estágio (Gestão de Redes)</a>
+    <a href="projetos-pessoais.html" class="text-white font-bold border-b border-zinc-400 pb-1 text-sm tracking-tight">Projetos Pessoais</a>
+    <a href="contacto.html" class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium tracking-tight">Contacto</a>
+  </div>
+  <button class="md:hidden text-primary" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+  </button>
+</nav>
+<div id="mobile-nav" class="hidden fixed top-[68px] left-0 w-full bg-black/95 backdrop-blur-xl z-40 flex flex-col p-8 space-y-6 border-t border-zinc-900">
+  <a href="sobre-mim.html" class="text-zinc-300 hover:text-white text-sm font-medium">Sobre mim</a>
+  <a href="trabalhos.html" class="text-zinc-300 hover:text-white text-sm font-medium">Trabalhos Académicos</a>
+  <a href="estagio.html" class="text-zinc-300 hover:text-white text-sm font-medium">Estágio (Gestão de Redes)</a>
+  <a href="projetos-pessoais.html" class="text-white font-bold text-sm">Projetos Pessoais</a>
+  <a href="contacto.html" class="text-zinc-300 hover:text-white text-sm font-medium">Contacto</a>
+</div>
+
+<!-- CORREÇÃO: flex-1 para este wrapper crescer e empurrar o footer -->
+<div class="flex-1">
+
+  <!-- Hero -->
+  <section class="relative min-h-[80vh] flex flex-col justify-end px-12 pb-24 overflow-hidden bg-black">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover opacity-40"
+        src="Imagens\Projetos pessoais\banner.jpg" alt="banner">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="px-4 py-1 rounded-full border border-outline-variant/30 text-xs tracking-widest uppercase text-secondary">Laboratório Criativo & Gestão de redes sociais</span>
+      </div>
+      <h1 class="text-7xl md:text-9xl font-headline font-extrabold tracking-tighter text-white mb-8">Projetos Pessoais</h1>
+      <p class="text-xl md:text-2xl text-justify text-on-surface-variant max-w-2xl leading-relaxed">
+        A aplicação do <em>design</em> e do <em>storytelling</em> às minhas paixões pessoais: passando pela gestão de uma plataforma solidária para adoção de animais abandonados e partilha de animais desaparecidos.
+      </p>
+    </div>
+  </section>
+
+  <!-- O Desafio -->
+  <section class="py-32 px-12 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+      <div>
+        <h2 class="text-4xl font-headline font-bold text-white tracking-tight mb-4">O Desafio</h2>
+        <div class="w-12 h-1 bg-primary"></div>
+      </div>
+      <div class="space-y-6">
+        <p class="text-justify text-on-surface-variant leading-relaxed">
+          O desafio central deste projeto de voluntariado digital consiste em combater o abandono animal através do poder da comunicação. Num cenário onde o tempo é crítico, o objetivo é gerir uma plataforma no Instagram que atue como ponte entre animais de rua, perdidos ou abandonados, e o seu reencontro com os donos originais ou a integração numa nova família responsável.
+        </p>
+        <a href="https://www.instagram.com/procuro.um.lar/" target="_blank" rel="noopener noreferrer" class="group inline-flex mt-8 px-8 py-4 rounded-xl bg-primary text-on-primary font-headline font-bold text-base items-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(198,198,199,0.15)]">
+          <span class="material-symbols-outlined">link</span>
+          Visitar Página
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Masonry Grid -->
+  <section class="py-32 px-12 bg-black">
+    <div class="max-w-7xl mx-auto">
+      <div class="custom-grid">
+        <!-- Procuro Um Lar (1:1) -->
+        <div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-1-1 cursor-pointer transition-all duration-500 hover:scale-[1.02]">
+          <img class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700"
+            src="Imagens/Projetos%20pessoais/Procuro%20um%20Lar%20LOGO.jpg" alt="Procuro Um Lar">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-8 w-full">
+            <span class="text-[10px] text-primary uppercase tracking-widest font-bold">Logo</span>
+            <h3 class="text-2xl font-headline font-bold text-white mt-2">Procuro Um Lar</h3>
+            <p class="text-on-surface-variant text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Identidade visual para plataforma de adoção animal.</p>
+          </div>
+        </div>
+
+        <!-- Sebastião (4:5) -->
+        <div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-4-5 cursor-pointer transition-all duration-500 hover:scale-[1.02] md:mt-12">
+          <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-all duration-700"
+            src="Imagens/Projetos%20pessoais/Gemini_Generated_Image_a0i0hka0i0hka0i0.png" alt="Sebastião">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-8">
+            <span class="text-[10px] text-primary uppercase tracking-widest font-bold">Post</span>
+            <h3 class="text-3xl font-headline font-bold text-white mt-2">Sebastião</h3>
+            <p class="text-on-surface-variant text-sm mt-2">Criação de um post para partilha nas redes sociais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- fim do flex-1 -->
+
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-zinc-900 bg-black flex flex-col md:flex-row justify-between items-center px-12 gap-6">
+  <div class="font-light text-xs uppercase tracking-widest text-zinc-400">© Gonçalo Aleluia. Todos os direitos reservados.</div>
+  <div class="flex flex-wrap gap-6 justify-center md:justify-end">
+    <a href="https://www.linkedin.com/in/gonçaloaleluia/" class="font-light text-xs uppercase tracking-widest text-zinc-600 hover:text-zinc-100 transition-colors">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- Scroll Indicator -->
+<div class="fixed right-6 top-1/2 -translate-y-1/2 h-32 w-px bg-zinc-800 hidden lg:block">
+  <div class="absolute top-0 w-full bg-secondary h-1/3 shadow-[0_0_10px_rgba(155,158,163,0.5)]"></div>
+</div>
+
+</body>
+</html>

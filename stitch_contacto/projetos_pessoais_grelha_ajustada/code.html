@@ -1,0 +1,186 @@
+<!DOCTYPE html><html class="dark" lang="pt"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>[Seu Nome] | Projetos Pessoais</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#585c60",
+              "surface-container-high": "#1f1f1f",
+              "secondary": "#9b9ea3",
+              "surface-bright": "#2c2c2c",
+              "surface-container-lowest": "#000000",
+              "on-error-container": "#ff9993",
+              "surface-container-low": "#131313",
+              "tertiary-fixed": "#f2f4f2",
+              "surface": "#0e0e0e",
+              "error-dim": "#bb5551",
+              "error-container": "#7f2927",
+              "outline-variant": "#484848",
+              "primary-dim": "#b8b9b9",
+              "outline": "#757575",
+              "secondary-dim": "#9b9ea3",
+              "secondary-fixed-dim": "#d2d4da",
+              "on-secondary": "#1d2024",
+              "secondary-container": "#383c40",
+              "on-tertiary-fixed": "#474a49",
+              "secondary-fixed": "#e0e2e8",
+              "error": "#ee7d77",
+              "primary-container": "#454747",
+              "on-tertiary-fixed-variant": "#636765",
+              "surface-container": "#191919",
+              "inverse-on-surface": "#555555",
+              "tertiary-dim": "#e9ece9",
+              "tertiary-fixed-dim": "#e3e6e4",
+              "surface-dim": "#0e0e0e",
+              "surface-variant": "#262626",
+              "tertiary": "#f7faf8",
+              "on-primary": "#3f4041",
+              "on-surface-variant": "#ababab",
+              "primary-fixed-dim": "#d4d4d4",
+              "on-background": "#e5e5e5",
+              "on-primary-container": "#d0d0d0",
+              "primary": "#c6c6c7",
+              "surface-container-highest": "#262626",
+              "background": "#0e0e0e",
+              "tertiary-container": "#e9ece9",
+              "inverse-primary": "#5e5f60",
+              "on-tertiary": "#5c605e",
+              "on-surface": "#e5e5e5",
+              "on-primary-fixed": "#3e4040",
+              "on-secondary-container": "#bdbfc5",
+              "primary-fixed": "#e2e2e2",
+              "on-primary-fixed-variant": "#5a5c5c",
+              "inverse-surface": "#f9f9f9",
+              "on-error": "#490106",
+              "surface-tint": "#c6c6c7",
+              "on-secondary-fixed": "#3c4044",
+              "on-tertiary-container": "#545756"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #e5e5e5; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-nav { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(20px); }
+        
+        .custom-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .aspect-1-1 { aspect-ratio: 1 / 1; }
+        .aspect-4-5 { aspect-ratio: 4 / 5; }
+
+        @media (max-width: 768px) {
+            .custom-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto shadow-[0_0_64px_rgba(198,198,199,0.08)]">
+<div class="text-xl font-bold tracking-tighter text-zinc-100 dark:text-white font-headline" style="">Gonçalo Aleluia | Portfólio Digital</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight" href="#" style="">Sobre mim</a>
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight" href="#" style="">Trabalhos Académicos</a>
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight" href="#" style="">Estágio (Gestão de Redes)</a>
+<a class="text-white font-bold border-b border-zinc-400 pb-1 text-sm font-medium Inter tracking-tight" href="#" style="">Projetos Pessoais</a>
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight" href="#" style="">Contacto</a>
+</div>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-6 py-2 rounded-xl font-bold text-sm scale-95 active:scale-90 transition-transform hover:bg-zinc-100" style="">
+<span class="material-symbols-outlined text-sm" style="">description</span>
+        Ver Currículo
+    </button>
+</nav>
+<!-- Hero Section -->
+<header class="pt-40 pb-20 px-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<span class="text-primary font-label text-xs uppercase tracking-[0.3em]" style="">Laboratório Criativo</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-none text-white" style="">
+            Projetos <br> <span class="text-secondary-dim" style="">Pessoais.</span>
+</h1>
+<p class="text-on-surface-variant max-w-xl text-lg font-light leading-relaxed pt-6" style="">A aplicação do <i data-path-to-node="8,0" data-index-in-node="16">design</i> e do <i data-path-to-node="8,0" data-index-in-node="28">storytelling</i> às minhas paixões pessoais: desde a gestão de uma plataforma solidária para adoção de animais abandonados, até à direção de arte na criação de <i data-path-to-node="8,0" data-index-in-node="184">posters</i> para futebol.</p>
+</div>
+</header>
+<!-- Masonry Grid Section -->
+<main class="px-8 pb-32 max-w-7xl mx-auto">
+<div class="custom-grid">
+<!-- Project 1: Typography Study (1:1 Aspect Ratio) -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-1-1 cursor-pointer transition-all duration-500 hover:scale-[1.02]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700" data-alt="abstract monochromatic typography art" src="https://cdn.discordapp.com/attachments/1492922970589495356/1492923137388576839/Procuro_um_Lar_LOGO.jpg?ex=69e50185&amp;is=69e3b005&amp;hm=7adef24ab04bc4cf3a52f15930a9e71d06e9b529727a49be46e36cead9dafe59&amp;" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="text-[10px] text-primary uppercase tracking-widest font-bold" style="">logo</span>
+<h3 class="text-2xl font-headline font-bold text-white mt-2" style="">Procuro Um Lar</h3>
+<p class="text-on-surface-variant text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style="">Exploração de glifos brutais e contraste extremo.</p>
+</div>
+</div>
+<!-- Project 2: Branding (4:5 Aspect Ratio) -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-4-5 cursor-pointer transition-all duration-500 hover:scale-[1.02] md:mt-12">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-all duration-700" data-alt="minimalist brand identity design" src="https://cdn.discordapp.com/attachments/1492922970589495356/1492927027760594984/Gemini_Generated_Image_a0i0hka0i0hka0i0.png?ex=69e50524&amp;is=69e3b3a4&amp;hm=fdd6ecdc2cdc1ca4e5ba534acb6204557f0efc0461c71ee5e6261dde213f77a7&amp;" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-[10px] text-primary uppercase tracking-widest font-bold" style="">Post</span>
+<h3 class="text-3xl font-headline font-bold text-white mt-2" style="">Sebastião</h3>
+<p class="text-on-surface-variant text-sm mt-2" style="">Criação de um post para partilha nas redes sociais.</p>
+</div>
+</div>
+<!-- Project 3: 3D Poster (4:5 Aspect Ratio) -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-4-5 cursor-pointer transition-all duration-500 hover:scale-[1.02] md:-mt-12">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-700" data-alt="poster design" src="https://cdn.discordapp.com/attachments/1492922970589495356/1492923138017591337/Yamal.png?ex=69e50185&amp;is=69e3b005&amp;hm=24a33902cb13f120a4bef57c16609930c69bcd3cfa5a06276eb366b1cfaced18&amp;" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-[10px] text-primary uppercase tracking-widest font-bold" style="">Poster</span>
+<h3 class="text-2xl font-headline font-bold text-white mt-2" style="">Lamine Yamal</h3>
+<p class="text-on-surface-variant text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style="">Criação de poster para dia de jogo.</p>
+</div>
+</div>
+<!-- Project 4: Editorial (1:1 Aspect Ratio) -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-1-1 cursor-pointer transition-all duration-500 hover:scale-[1.02]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-all duration-700" data-alt="magazine layout design" src="https://cdn.discordapp.com/attachments/1492922970589495356/1495204788202373171/Ronaldo.png?ex=69e56579&amp;is=69e413f9&amp;hm=bd638749b7e6b783cd49ef4ca58617c30a0e4d7dc6ef939f86923e026e3507a2&amp;" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="text-[10px] text-primary uppercase tracking-widest font-bold" style="">Wallpaper</span>
+<h3 class="text-3xl font-headline font-bold text-white mt-2" style="">Cristiano Ronaldo</h3>
+<p class="text-on-surface-variant text-sm mt-2" style="">Criação wallpaper, Cristiano Ronaldo campeão Liga das Nações</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Scroll Indicator -->
+<div class="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 group">
+<span class="text-[8px] font-label text-zinc-600 rotate-90 uppercase tracking-widest group-hover:text-primary transition-colors" style="">Scroll</span>
+<div class="w-[1px] h-32 bg-zinc-800 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1/3 bg-primary"></div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-zinc-900 bg-black">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 w-full">
+<div class="font-light Inter text-xs uppercase tracking-widest text-zinc-500 mb-4 md:mb-0" style="">
+            © GONÇALO ALELUIA. Todos os direitos reservados.
+        </div>
+<div class="flex gap-8">
+<a class="font-light Inter text-xs uppercase tracking-widest text-zinc-600 hover:text-zinc-100 transition-colors opacity-80 hover:opacity-100" href="#" style="">LinkedIn</a>
+<a class="font-light Inter text-xs uppercase tracking-widest text-zinc-600 hover:text-zinc-100 transition-colors opacity-80 hover:opacity-100" href="#" style="">Behance</a>
+</div>
+</div>
+</footer>
+</body></html>

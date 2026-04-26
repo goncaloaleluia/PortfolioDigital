@@ -1,0 +1,214 @@
+<!DOCTYPE html><html class="dark" lang="pt"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#585c60",
+              "surface-container-high": "#1f1f1f",
+              "secondary": "#9b9ea3",
+              "surface-bright": "#2c2c2c",
+              "surface-container-lowest": "#000000",
+              "on-error-container": "#ff9993",
+              "surface-container-low": "#131313",
+              "tertiary-fixed": "#f2f4f2",
+              "surface": "#0e0e0e",
+              "error-dim": "#bb5551",
+              "error-container": "#7f2927",
+              "outline-variant": "#484848",
+              "primary-dim": "#b8b9b9",
+              "outline": "#757575",
+              "secondary-dim": "#9b9ea3",
+              "secondary-fixed-dim": "#d2d4da",
+              "on-secondary": "#1d2024",
+              "secondary-container": "#383c40",
+              "on-tertiary-fixed": "#474a49",
+              "secondary-fixed": "#e0e2e8",
+              "error": "#ee7d77",
+              "primary-container": "#454747",
+              "on-tertiary-fixed-variant": "#636765",
+              "surface-container": "#191919",
+              "inverse-on-surface": "#555555",
+              "tertiary-dim": "#e9ece9",
+              "tertiary-fixed-dim": "#e3e6e4",
+              "surface-dim": "#0e0e0e",
+              "surface-variant": "#262626",
+              "tertiary": "#f7faf8",
+              "on-primary": "#3f4041",
+              "on-surface-variant": "#ababab",
+              "primary-fixed-dim": "#d4d4d4",
+              "on-background": "#e5e5e5",
+              "on-primary-container": "#d0d0d0",
+              "primary": "#c6c6c7",
+              "surface-container-highest": "#262626",
+              "background": "#0e0e0e",
+              "tertiary-container": "#e9ece9",
+              "inverse-primary": "#5e5f60",
+              "on-tertiary": "#5c605e",
+              "on-surface": "#e5e5e5",
+              "on-primary-fixed": "#3e4040",
+              "on-secondary-container": "#bdbfc5",
+              "primary-fixed": "#e2e2e2",
+              "on-primary-fixed-variant": "#5a5c5c",
+              "inverse-surface": "#f9f9f9",
+              "on-error": "#490106",
+              "surface-tint": "#c6c6c7",
+              "on-secondary-fixed": "#3c4044",
+              "on-tertiary-container": "#545756"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #e5e5e5; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .glass-nav { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(20px); }
+        .glass-card { background: rgba(38, 38, 38, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(72, 72, 72, 0.15); }
+        .metallic-glow { box-shadow: 0 0 64px rgba(198, 198, 199, 0.08); }
+        .fluid-gradient { background: linear-gradient(135deg, #c6c6c7 0%, #ffffff 100%); }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full mx-auto shadow-[0_0_64px_rgba(198,198,199,0.08)]">
+<div class="text-xl font-bold tracking-tighter text-zinc-100 dark:text-white font-headline" style="">
+            Gonçalo Aleluia | Portfólio Digital</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-white font-bold border-b border-zinc-400 pb-1 text-sm font-medium Inter tracking-tight" href="#" style="">Sobre mim</a>
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight transition-all duration-300" href="#" style="">Trabalhos Académicos</a>
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight transition-all duration-300" href="#" style="">Estágio (Gestão de Redes)</a>
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight transition-all duration-300" href="#" style="">Projetos Pessoais</a>
+<a class="text-zinc-400 hover:text-zinc-200 transition-colors text-sm font-medium Inter tracking-tight transition-all duration-300" href="#" style="">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-white transition-all scale-95 active:scale-90" style="">
+<span class="material-symbols-outlined text-sm" style="">description</span>
+            Ver Currículo
+        </button>
+</nav>
+<!-- Hero Section -->
+<main class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6 overflow-hidden">
+<!-- Background Accents -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl w-full text-center">
+<!-- Pill Tag -->
+<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/20 mb-8 scale-95 hover:scale-100 transition-transform">
+<span class="text-primary text-xs font-bold tracking-widest uppercase flex items-center gap-2" style="">
+<span class="text-[10px]" style="">◆</span> Portfólio Digital</span>
+</div>
+<!-- Headline -->
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl lg:text-8xl tracking-tighter text-on-surface mb-8 leading-[0.9] drop-shadow-2xl" style="">
+                Gonçalo Aleluia</h1>
+<!-- Subtitle -->
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light" style="">
+                A transformar conceitos académicos em estratégias reais</p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(198,198,199,0.3)] transition-all flex items-center justify-center gap-2 group" style="">
+                    Sobre mim (com CV)
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto px-8 py-4 bg-transparent border border-outline-variant/30 text-on-surface rounded-xl font-bold text-lg hover:bg-surface-bright transition-all" style="">
+                    Ver Projetos
+                </button>
+</div>
+<!-- Scroll Indicator -->
+<div class="flex flex-col items-center gap-4 text-on-surface-variant/60 animate-bounce">
+<span class="text-xs uppercase tracking-[0.3em] font-medium" style="">Desliza para baixo</span>
+<div class="w-6 h-10 rounded-full border border-outline-variant/40 flex justify-center p-1.5">
+<div class="w-1 h-2 bg-primary rounded-full"></div>
+</div>
+<span class="text-[10px] uppercase tracking-widest" style="">para ver os projetos</span>
+</div>
+</div>
+<!-- Hero Background Image (Fluid Smoke/Metallic) -->
+<div class="absolute inset-0 -z-10 opacity-30">
+<img alt="" class="w-full h-full object-cover mix-blend-screen" data-alt="abstract flowing liquid metal background with iridescent silver highlights and deep black shadows in a cinematic high-end gallery style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-v517lRppgRfkjzO61SvWXZgrZf7nH2rstphBztgF8wiGZcHO91Bzwxcp5RQ0Fo-GxzkyQAjxAvsO75zukcw55aqkoZpzE6rEVXG5fuqAb2mMwNXsyIopjUTiElIvqcDV73VIeSxKFTTiwIvxohaV4btqXSC9xRxd2cTVA--sEo7CA2T7dLgecVrZiLHI8MvaBr4ouAq5OMv-0Z1mMuzyeJ41ZuAcYTEYI2L3iMoFLeaCOk8rCbuDUAmbnkC7GY2nIlhunmGssrt" style="">
+</div>
+</main>
+<!-- Summary Cards Section (Bento Inspired Grid) -->
+<section class="py-32 px-8 max-w-7xl mx-auto relative">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- CV Card -->
+<div class="glass-card p-8 rounded-xl flex flex-col justify-between aspect-square md:aspect-auto min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" style="">account_circle</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-2" style="">Sobre mim</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" style="">Experiência profissional detalhada, formação académica e competências técnicas.</p>
+</div>
+<div class="flex items-center text-primary text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all" style="">
+                    Explorar <span class="material-symbols-outlined text-sm" style="">north_east</span>
+</div>
+</div>
+<!-- Academic Card -->
+<div class="glass-card p-8 rounded-xl flex flex-col justify-between min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined text-3xl" style="">school</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-2" style="">Trabalhos Académicos</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" style="">Uma seleção de projetos teóricos e práticos desenvolvidos durante o percurso universitário.</p>
+</div>
+<div class="flex items-center text-secondary text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all" style="">
+                    Ver Portfólio <span class="material-symbols-outlined text-sm" style="">north_east</span>
+</div>
+</div>
+<!-- Internship Card -->
+<div class="glass-card p-8 rounded-xl flex flex-col justify-between min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+<div class="w-12 h-12 rounded-lg bg-zinc-500/10 flex items-center justify-center text-zinc-300 mb-6">
+<span class="material-symbols-outlined text-3xl" style="">grid_view</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-2" style="">Estágio (Gestão de Redes)</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" style="">Estratégias digitais, criação de conteúdo e análise de métricas no mundo real.</p>
+</div>
+<div class="flex items-center text-zinc-300 text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all" style="">
+                    Ver Case Studies <span class="material-symbols-outlined text-sm" style="">north_east</span>
+</div>
+</div>
+<!-- Personal Projects Card -->
+<div class="glass-card p-8 rounded-xl flex flex-col justify-between min-h-[280px] hover:scale-[1.02] hover:bg-surface-container-highest transition-all duration-300 group">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed/10 flex items-center justify-center text-tertiary-fixed mb-6">
+<span class="material-symbols-outlined text-3xl" style="">palette</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-2" style="">Projetos Pessoais</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6" style="">Onde a criatividade não tem limites. Explorações visuais, branding e arte digital.</p>
+</div>
+<div class="flex items-center text-tertiary-fixed text-xs font-bold uppercase tracking-widest group-hover:gap-2 transition-all" style="">
+                    Ver Galeria <span class="material-symbols-outlined text-sm" style="">north_east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-zinc-900 bg-black flex flex-col md:flex-row justify-between items-center px-12">
+<div class="text-zinc-400 font-light Inter text-xs uppercase tracking-widest mb-6 md:mb-0" style="">
+            © Gonçalo aleluia. Todos os direitos reservados.
+        </div>
+<div class="flex space-x-12">
+<a class="text-zinc-600 hover:text-zinc-100 transition-colors font-light Inter text-xs uppercase tracking-widest opacity-80 hover:opacity-100" href="#" style="">LinkedIn</a>
+<a class="text-zinc-600 hover:text-zinc-100 transition-colors font-light Inter text-xs uppercase tracking-widest opacity-80 hover:opacity-100" href="#" style="">Behance</a>
+</div>
+</footer>
+<!-- Vertical Fluid Scroll Indicator (UI Art) -->
+<div class="fixed right-6 top-1/2 -translate-y-1/2 h-32 w-px bg-outline-variant/30 hidden lg:block">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-8 bg-secondary rounded-full opacity-60"></div>
+</div>
+</body></html>

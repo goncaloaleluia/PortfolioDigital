@@ -1,0 +1,251 @@
+<!DOCTYPE html><html class="dark" lang="pt"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Compal Vital+ | Academic Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#d4d4d4",
+                        "surface-container-high": "#1f1f1f",
+                        "surface-container-highest": "#262626",
+                        "on-secondary": "#1d2024",
+                        "tertiary-fixed": "#f2f4f2",
+                        "on-tertiary-fixed-variant": "#636765",
+                        "surface-container-lowest": "#000000",
+                        "on-background": "#e5e5e5",
+                        "inverse-on-surface": "#555555",
+                        "primary-container": "#454747",
+                        "on-tertiary-container": "#545756",
+                        "surface-container": "#191919",
+                        "primary": "#c6c6c7",
+                        "on-secondary-fixed-variant": "#585c60",
+                        "outline": "#757575",
+                        "secondary-fixed": "#e0e2e8",
+                        "tertiary-dim": "#e9ece9",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-surface": "#f9f9f9",
+                        "error-container": "#7f2927",
+                        "on-error-container": "#ff9993",
+                        "on-error": "#490106",
+                        "on-surface-variant": "#ababab",
+                        "on-secondary-container": "#bdbfc5",
+                        "on-primary-container": "#d0d0d0",
+                        "error-dim": "#bb5551",
+                        "on-tertiary": "#5c605e",
+                        "secondary-container": "#383c40",
+                        "secondary-fixed-dim": "#d2d4da",
+                        "surface-container-low": "#131313",
+                        "on-secondary-fixed": "#3c4044",
+                        "tertiary": "#f7faf8",
+                        "on-surface": "#e5e5e5",
+                        "on-primary-fixed": "#3e4040",
+                        "tertiary-fixed-dim": "#e3e6e4",
+                        "error": "#ee7d77",
+                        "inverse-primary": "#5e5f60",
+                        "primary-dim": "#b8b9b9",
+                        "surface-tint": "#c6c6c7",
+                        "secondary": "#9b9ea3",
+                        "on-primary-fixed-variant": "#5a5c5c",
+                        "on-primary": "#3f4041",
+                        "secondary-dim": "#9b9ea3",
+                        "surface-bright": "#2c2c2c",
+                        "surface": "#0e0e0e",
+                        "tertiary-container": "#e9ece9",
+                        "on-tertiary-fixed": "#474a49",
+                        "surface-dim": "#0e0e0e",
+                        "background": "#0e0e0e",
+                        "surface-variant": "#262626",
+                        "outline-variant": "#484848"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(38, 38, 38, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(72, 72, 72, 0.15);
+        }
+        .liquid-gradient {
+            background: linear-gradient(135deg, #c6c6c7 0%, #454747 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Specific Aspect Ratio Containers */
+        .img-square { aspect-ratio: 1080 / 1080; }
+        .img-portrait { aspect-ratio: 1080 / 1350; }
+        .img-tall { aspect-ratio: 1080 / 1950; }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl shadow-[0_0_64px_rgba(198,198,199,0.08)]">
+<div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+<span class="text-xl font-bold tracking-tighter text-white font-headline" style="">Gonçalo Aleluia | Portfólio Digital</span>
+<div class="hidden md:flex space-x-8 font-headline tracking-tight text-sm">
+<a class="text-neutral-500 hover:text-neutral-200 transition-colors" href="#" style="">Sobre mim</a>
+<a class="text-neutral-500 hover:text-neutral-200 transition-colors" href="#" style="">Trabalhos Académicos</a>
+<a class="text-white font-bold border-b-2 border-neutral-400 pb-1 hover:text-neutral-200 transition-colors" href="#" style="">Estágio (Gestão de Redes)</a>
+<a class="text-neutral-500 hover:text-neutral-200 transition-colors" href="#" style="">Projetos Pessoais</a>
+<a class="text-neutral-500 hover:text-neutral-200 transition-colors" href="#" style="">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="px-6 bg-primary text-on-primary font-headline font-bold text-sm flex items-center gap-2 transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg rounded-[10px] py-1.5" href="#" style="">
+<span class="material-symbols-outlined text-lg" style="">description</span>
+        Ver Currículo
+    </a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex flex-col justify-end px-12 pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="Cinematic macro shot of swirling dark liquid metal and silver smoke against a deep black background, moody atmosphere with high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-YMvM8w1tl6p0tf4-3AQrYr21ZTLYsIAKKhhaPtPmPbz9B-1PpfJwGnlfC1r59otU59qnIKFg3yqF3xMORBY7KV47C7Gb8dEJ2zJ9UIu5NL0uD6qDah3j7upXc3qwtdZyBYm4jYjS4p9kxfXwXc4X7dWs5TBFu70QpVxR-LLr_g_0FtUSzQBV_dEpaOiSKpC0MULkBQCDfu-fs1OyyTD6U_hdrcxSi1v7ZH0UaQIJ3jx8-Saz_nYdU-dEjI3SopbJITTsVChriP66" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-5xl">
+<div class="flex items-center gap-4 mb-6">
+<span class="px-4 py-1 rounded-full border border-outline-variant/30 text-xs tracking-widest uppercase text-secondary font-label" style="">Estágio curricular</span>
+<span class="text-secondary font-label tracking-widest text-xs uppercase" style="">2026</span>
+</div>
+<h1 class="text-7xl md:text-9xl font-headline font-extrabold tracking-tighter text-white mb-8" style="">ifthenpay</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-body max-w-2xl leading-relaxed" style=""><span class="" style="white-space-collapse: preserve;">Aplicação prática de conhecimentos em ambiente corporativo, focado na aceleração de resultados digitais através da gestão estratégica de redes sociais no setor B2B.</span></p>
+</div>
+</section>
+<!-- The Challenge -->
+<section class="py-32 px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+<div>
+<h2 class="text-4xl font-headline font-bold text-white tracking-tight mb-4" style="">O Desafio</h2>
+<div class="w-12 h-1 bg-primary"></div>
+</div>
+<div class="space-y-6">
+<p class="text-lg text-on-surface-variant leading-relaxed" style=""><span class="" style="white-space-collapse: preserve;">O desafio neste estágio consistiu em humanizar uma marca tecnológica (Ifthenpay) que atua num setor complexo e regulado como o dos pagamentos digitais. O objetivo foi transformar a comunicação institucional numa presença digital empática, educativa e geradora de confiança.</span></p>
+<p class="text-lg text-on-surface-variant leading-relaxed" style="">Era crucial desenvolver uma estratégia omnicanal que não só informasse, mas que educasse a audiência através da literacia financeira. Isto exigiu a criação de narrativas visuais de alto impacto, utilizando o <i data-index-in-node="208" data-path-to-node="10,0">storytelling</i> para converter conceitos técnicos em conteúdo acessível, impulsionando simultaneamente o <i data-index-in-node="310" data-path-to-node="10,0">engagement</i> e a autoridade da marca.</p>
+</div>
+</div>
+</section>
+<!-- Investigation & Solution -->
+<section class="py-32 px-12 bg-black">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-headline font-bold text-white tracking-tight mb-4" style="">Investigação &amp; Solução</h2>
+<div class="space-y-4 text-on-surface-variant">
+<p class="" style=""><span class="" style="white-space-collapse: preserve;"><b data-index-in-node="0" data-path-to-node="15">01 Planeamento Estratégico -</b> Definição de uma linha editorial B2B focada na literacia de pagamentos, estruturando os temas para educar e desmistificar os serviços financeiros para empresas e consumidores.</span></p>
+<p class="" style=""><span class="" style="white-space-collapse: preserve;"><b data-index-in-node="0" data-path-to-node="16">02 Produção Criativa -</b> Criação de conteúdos de formato longo e curto (carrosséis interativos, vídeos <i data-index-in-node="101" data-path-to-node="16">Reels</i>) orientados para a retenção, garantindo um <i data-index-in-node="150" data-path-to-node="16">storytelling</i> visual coerente com a identidade da marca.</span></p>
+<p class="" style=""><span class="" style="white-space-collapse: preserve;"><b data-index-in-node="0" data-path-to-node="17">03 Gestão de Comunidade &amp; Analytics -</b> Monitorização e análise de métricas chave de desempenho (KPIs), otimizando continuamente a estratégia de conteúdo para potenciar o crescimento do alcance orgânico e da geração de <i data-index-in-node="217" data-path-to-node="17">leads</i>.</span></p>
+</div>
+<div class="mt-8 flex justify-between items-center">
+<a class="group relative px-8 py-4 rounded-xl overflow-hidden bg-primary text-on-primary font-headline font-bold text-base flex items-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(198,198,199,0.15)]" href="#" style="">
+<span class="material-symbols-outlined" style="">download</span>
+        Descarregar Trabalho (PDF)
+        <div class="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</a><a class="group relative px-8 py-4 rounded-xl overflow-hidden border border-primary/50 text-primary font-headline font-bold text-base flex items-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 hover:bg-primary/5 shadow-[0_0_30px_rgba(198,198,199,0.05)]" href="#" style="">
+<span class="material-symbols-outlined" style="">open_in_new</span>
+    Visitar Instagram
+    <div class="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</a>
+</div>
+</div>
+<!-- Updated Dynamic Image Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6"><!-- Square 1 (1080x1080) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="aspect-square w-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Square visual 1080x1080" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdeDrkS-npyq-8nzsPXpwCAPlSHPEcuI-rDRpii7UwkV_SNfGEhxFvAAoTk2G1R5a4bX3rcQzTkkTIyCdP7TelWCDpKwy25rXv1Xngb0_ad7PKPajFiFV-0p2MzliXwzx5VTandi86V1r26lxLkSu2Z8WLRvZyajPeUrKJvInaSt5qtWm6m4pWCXKEQXh7Xh2YIBJ97bRahEveZVQu5mEByPM9hxH0RMea07ZL3zr-u6e7o6yOlWai4xBh0IskPX9d4aucFo8MxUJr" style="aspect-ratio: 1 / 1;">
+</div>
+</div>
+<!-- Standard Vertical 1 (1080x1350) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="img-portrait w-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vertical visual 1080x1350" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkL3Y4gzw56EJPo1t6IFN5NaDIbGp4zB9TLq13RdePO9CYc0FPQ2njAX50P5fh3HKLgvo4fQnFLUk7p4WKCV7ugLMHpxFXCptV25HUjeAxu8FW0QvGhMWo2eEQEuNZAbXP0L-ZjVPq3YfeJOx6HYrWA0MYJLe7zkiafv54mjcKVuLTQvHQ8iDgxB2_xKJ6Knhi49lBVVQFeUh9aD2y9svHunQUiKz9YxXT_vXogpuwxR9sQAc6PhQFF6Svg4SraLeSAp-zDHE5i7zY" style="aspect-ratio: 1080 / 1350;">
+</div>
+</div>
+<!-- Standard Vertical 2 (1080x1350) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="img-portrait w-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vertical visual 1080x1350" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYjcjmhP4zZS22YRttN2H-DDqHz7favdClB1gZ0jzEZQf2VEscphZ-5NXGGY-57YGoGGkpCw65xEe_EhvmBe7KHEYebPzgACMMFMhYWdZDD1GmXUGGDo3QU5NY5eIT7c72D1cv8YyTSpJdAEMp72CROQg-5OKnrTMt2b4nfdtt2fBA2cx5U_r7l_KCZyF6FZC1v3GsEwnpyxkT7J2glnLyjftrWMlTKv16UDKVStbZl38qfOmgd8bqFqz5aF414sEru4sIWweClQtu" style="aspect-ratio: 1080 / 1350;">
+</div>
+</div>
+<!-- Custom Box (1013x1350) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="w-full overflow-hidden" style="aspect-ratio: 1013/1350;">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Custom visual 1013x1350" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBElT-C1FxnfU6kNN2XbII5teHseOkimVq55y0Nls0fvCOfVa56wcygEM5D4M3hYun_0F1Z14QQaPALMW654QDDMOgGTqKYtmDNEhhHK8QDiDLXdClQTxcV2ZmdserLCr5G_jJN2yJj2aLKPHmPzNmKEYsVLzRDIQmhO8T2ZFpbTbpgbr-xzwwz8H0CYYPeeyl5P6qhbMHJLUFwGQpfFrk2IuyQbSLGp9fkLYquqwqmC6SHCiWfHO3GqKRoqylLIuaI1g95dUtRqhM_" style="aspect-ratio: 1013 / 1350;">
+</div>
+</div>
+<!-- Square 2 (1080x1080) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="aspect-square w-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Square visual 1080x1080" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0rrK_6GFdWUTTfAL3DTeFNsgXM0o50-fuRsgz9T2o2jclqPKSBweS8ZMLwv4Dfd4DrT6LX2D3CmuDmfuPH2_0nmb9idR1Hy7h5RrqaxwJwD4L3kWf7cRCUE1Aqq6SVgVqjRy2SmeRuVd9ea32luZnZ99VzlrC6H6pdUvzgXgUQ6LQgyvLWeKhJcD0wDKWFw5iJJWK4YJzrHJRIoKpxPFQ9e9XCBO7-UIkKexwZqC4OFjzL_9VeG_7E7cmHrNI-5i717q01ZknMM5o" style="aspect-ratio: 1 / 1;">
+</div>
+</div>
+<!-- Custom Box (1080x1020) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="w-full overflow-hidden" style="aspect-ratio: 1080/1020;">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Custom visual 1080x1020" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPGJJuiGoHA-dSjvrWaBF1TMLmmjTKYDR6ISiVLWywaqw13cbrhiKq0KAEi6StmN3TAYUQAZyNo38zHUiDKt1e82rYgR7T9SWzfLsxRheBn0Xjm6l7sBk82wLlObq1AG9fD9wMTsM_ShQmjp-9g5dPbmEJS5lauh1bRXd-3jaAOpXGbXuPim3H_It2zhqx9HmpA_hUAd5zrI1b4edvOe14AXH1PKJT6LxtlNxqmCQrRWdDkgS3jKCq6n2fspdIj9mBBwqigjtBeCTE" style="aspect-ratio: 1080 / 1020;">
+</div>
+</div>
+<!-- Standard Vertical 3 (1080x1350) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="img-portrait w-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vertical visual 1080x1350" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYjcjmhP4zZS22YRttN2H-DDqHz7favdClB1gZ0jzEZQf2VEscphZ-5NXGGY-57YGoGGkpCw65xEe_EhvmBe7KHEYebPzgACMMFMhYWdZDD1GmXUGGDo3QU5NY5eIT7c72D1cv8YyTSpJdAEMp72CROQg-5OKnrTMt2b4nfdtt2fBA2cx5U_r7l_KCZyF6FZC1v3GsEwnpyxkT7J2glnLyjftrWMlTKv16UDKVStbZl38qfOmgd8bqFqz5aF414sEru4sIWweClQtu" style="aspect-ratio: 1080 / 1350;">
+</div>
+</div>
+<!-- Standard Vertical 4 (1080x1350) -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group">
+<div class="img-portrait w-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vertical visual 1080x1350" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkL3Y4gzw56EJPo1t6IFN5NaDIbGp4zB9TLq13RdePO9CYc0FPQ2njAX50P5fh3HKLgvo4fQnFLUk7p4WKCV7ugLMHpxFXCptV25HUjeAxu8FW0QvGhMWo2eEQEuNZAbXP0L-ZjVPq3YfeJOx6HYrWA0MYJLe7zkiafv54mjcKVuLTQvHQ8iDgxB2_xKJ6Knhi49lBVVQFeUh9aD2y9svHunQUiKz9YxXT_vXogpuwxR9sQAc6PhQFF6Svg4SraLeSAp-zDHE5i7zY" style="aspect-ratio: 1080 / 1350;">
+</div>
+</div></div>
+</div>
+</section>
+<!-- Back to Projects -->
+<section class="py-40 px-12 flex flex-col items-center justify-center">
+<h4 class="text-on-surface-variant mb-8 font-label tracking-widest uppercase text-xs" style="">Explorar mais trabalhos</h4>
+<a class="group relative px-12 py-6 rounded-xl overflow-hidden bg-primary text-on-primary font-headline font-bold text-lg flex items-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(198,198,199,0.2)]" href="#" style="">
+<span class="material-symbols-outlined" style="">arrow_back</span>
+                Voltar para Trabalhos Académicos
+                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-20 bg-black border-t border-neutral-800/30">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 w-full max-w-screen-2xl mx-auto space-y-4 md:space-y-0">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-neutral-400" style="">© 2024 Academic Portfolio. Built with Liquid Curator principles.</p>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-neutral-600 hover:text-white transition-colors" href="#" style="">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-neutral-600 hover:text-white transition-colors" href="#" style="">Terms of Service</a>
+</div>
+</div>
+</footer>
+<!-- Liquid Scroll Indicator -->
+<div class="fixed right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-neutral-900 rounded-full overflow-hidden hidden lg:block">
+<div class="w-full bg-secondary transition-all duration-300" style="height: 30%"></div>
+</div>
+</body></html>
