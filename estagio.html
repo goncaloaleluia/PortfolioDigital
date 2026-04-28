@@ -156,9 +156,9 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
           <p><strong class="text-zinc-300">02 Produção Criativa —</strong> Criação de conteúdos de formato longo e curto (carrosséis interativos, vídeos <em>Reels</em>) orientados para a retenção, garantindo um <em>storytelling</em> visual coerente com a identidade da marca.</p>
           <p><strong class="text-zinc-300">03 Gestão de Comunidade &amp; Analytics —</strong> Monitorização e análise de métricas chave de desempenho (KPIs), otimizando continuamente a estratégia de conteúdo para potenciar o crescimento do alcance orgânico e da geração de <em>leads</em>.</p>
         </div>
-        <a href="https://www.instagram.com/ifthenpay/" target="_blank" rel="noopener noreferrer" class="group relative inline-flex px-8 py-4 rounded-xl overflow-hidden bg-primary text-on-primary font-headline font-bold text-base items-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(198,198,199,0.15)]">
+        <a href="https://www.linkedin.com/company/ifthenpay/" target="_blank" rel="noopener noreferrer" class="group relative inline-flex px-8 py-4 rounded-xl overflow-hidden bg-primary text-on-primary font-headline font-bold text-base items-center gap-3 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(198,198,199,0.15)]">
           <span class="material-symbols-outlined">Link</span>
-          Visitar Página
+          Visitar LinkedIn da ifthenpay
         </a>
       </div>
 
@@ -171,9 +171,25 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
   </div>
 
   <!-- COLUNA 2, linha 1 -->
-  <div class="glass-card rounded-xl overflow-hidden group mb-6 break-inside-avoid">
-    <img class="w-full object-cover transition-transform duration-500 group-hover:scale-105" src="Imagens\Estágio\storie Dia da Mae.jpg" style="aspect-ratio: 1080 / 1920;">
-  </div>
+<div class="glass-card rounded-xl overflow-hidden group mb-6 break-inside-avoid">
+  <img class="w-full object-cover transition-transform duration-500 group-hover:scale-105" 
+    src="" 
+    id="img-coluna2-linha1"
+    style="aspect-ratio: 1080 / 1920;">
+</div>
+
+<script>
+  const imgEl = document.getElementById('img-coluna2-linha1');
+  const agora = new Date();
+  const limite = new Date('2026-05-03T11:00:00');
+
+  if (agora < limite) {
+    imgEl.src = "Imagens/Estágio/Soon 1920.jpg"; // ← substitui pelo nome da tua foto temporária
+  } else {
+    imgEl.src = "Imagens/Estágio/storie Dia da Mae.jpg";
+  }
+</script>
+
 
   <!-- COLUNA 3, linha 1 -->
   <div class="glass-card rounded-xl overflow-hidden group mb-6 break-inside-avoid">
@@ -195,11 +211,25 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
     <img class="w-full object-cover transition-transform duration-500 group-hover:scale-105" src="Imagens\Estágio\ifthenpay responde.jpg" style="aspect-ratio: 1013 / 1350;">
   </div>
 
-  <!-- COLUNA 1, linha 3 -->
-  <div class="glass-card rounded-xl overflow-hidden group mb-6 break-inside-avoid">
-    <img class="w-full object-cover transition-transform duration-500 group-hover:scale-105" src="Imagens\Estágio\O Alivio do Departamento Financeiro.jpg" style="aspect-ratio: 1080 / 1350;">
-  </div>
+<!-- COLUNA 1, linha 3 -->
+<div class="glass-card rounded-xl overflow-hidden group mb-6 break-inside-avoid">
+  <img class="w-full object-cover transition-transform duration-500 group-hover:scale-105" 
+    src=""
+    id="img-coluna1-linha3"
+    style="aspect-ratio: 1080 / 1350;">
+</div>
 
+<script>
+  const imgEl2 = document.getElementById('img-coluna1-linha3');
+  const agora2 = new Date();
+  const limite2 = new Date('2026-04-30T17:45:00');
+
+  if (agora2 < limite2) {
+    imgEl2.src = "Imagens/Estágio/Soon 1350.jpg"; // ← substitui pelo nome da tua foto temporária
+  } else {
+    imgEl2.src = "Imagens/Estágio/O Alivio do Departamento Financeiro.jpg";
+  }
+</script>
   <!-- COLUNA 2, linha 3 -->
   <div class="glass-card rounded-xl overflow-hidden group mb-6 break-inside-avoid">
     <img class="w-full object-cover transition-transform duration-500 group-hover:scale-105" src="Imagens\Estágio\1fb.jpg" style="aspect-ratio: 1 / 1;">
