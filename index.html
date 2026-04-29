@@ -127,7 +127,7 @@ body {
       Gonçalo Aleluia
     </h1>
     <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-      Da teoria à prática — estratégia digital com visão
+      A transformar conceitos académicos em estratégias reais
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
       <a href="sobre-mim.html" class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(198,198,199,0.3)] transition-all flex items-center justify-center gap-2 group">
@@ -209,9 +209,42 @@ body {
   </div>
 </footer>
 
-<!-- Scroll Indicator -->
-<div class="fixed right-6 top-1/2 -translate-y-1/2 h-32 w-px bg-zinc-800 hidden lg:block">
-  <div class="absolute top-0 w-full bg-secondary h-1/3 shadow-[0_0_10px_rgba(155,158,163,0.5)]"></div>
+<div id="scroll-indicator" class="fixed right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-zinc-900 rounded-full overflow-hidden hidden lg:block">
+  <div id="scroll-progress" class="w-full bg-secondary transition-all duration-150" style="height:0%"></div>
 </div>
+
+<button id="toggle-scroll-indicator" onclick="toggleScrollIndicator()" class="fixed right-8 bottom-8 w-8 h-8 rounded-full bg-zinc-900 border border-zinc-700 hover:border-zinc-500 transition-all duration-300 hidden lg:flex items-center justify-center" title="Toggle scroll indicator">
+  <span class="w-1 h-3 bg-secondary rounded-full block"></span>
+</button>
+
+<script>
+  const bar = document.getElementById('scroll-indicator');
+  const fill = document.getElementById('scroll-progress');
+  const btn = document.getElementById('toggle-scroll-indicator');
+  let enabled = true;
+
+  window.addEventListener('scroll', () => {
+    if (!enabled) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    fill.style.height = progress + '%';
+  });
+
+  function toggleScrollIndicator() {
+    enabled = !enabled;
+    bar.style.opacity = enabled ? '1' : '0';
+    btn.style.borderColor = enabled ? '' : '#ef4444';
+    fill.style.height = '0%';
+    localStorage.setItem('scrollIndicator', enabled ? 'on' : 'off');
+  }
+
+  const saved = localStorage.getItem('scrollIndicator');
+  if (saved === 'off') {
+    enabled = false;
+    bar.style.opacity = '0';
+    btn.style.borderColor = '#ef4444';
+  }
+</script>
 </body>
 </html>

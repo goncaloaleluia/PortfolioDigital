@@ -78,6 +78,10 @@ tailwind.config = {
 body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5; }
 .glass-card { background: rgba(38,38,38,0.4); backdrop-filter: blur(20px); border: 1px solid rgba(72,72,72,0.15); }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+
+/* Esconde barra de scroll nativa */
+html { scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
 </style>
 </head>
 <body class="bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary">
@@ -104,25 +108,24 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
   <a href="contacto.html" class="text-zinc-300 hover:text-white text-sm font-medium">Contacto</a>
 </div>
 
-<main class="pt-24">
   <!-- Hero -->
-  <section class="relative min-h-[70vh] flex flex-col justify-end px-12 pb-24 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img class="w-full h-full object-cover opacity-35"
-        src="Imagens/Trabalhos%20acad%C3%A9micos/roupa%20cao.png" alt="Roupa Termorregulação">
-      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+<section class="relative min-h-[70vh] flex flex-col justify-end px-12 pb-24 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover opacity-30"
+      src="Imagens\Trabalhos académicos\roupa cao.png" alt="Roupa Termorregulação">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+  <div class="relative z-10 max-w-5xl pt-24">
+    <div class="flex items-center gap-4 mb-6">
+      <span class="px-4 py-1 rounded-full border border-outline-variant/30 text-xs tracking-widest uppercase text-secondary">Interdisciplinar</span>
+      <span class="text-secondary tracking-widest text-xs uppercase">2025</span>
     </div>
-    <div class="relative z-10 max-w-5xl">
-      <div class="flex items-center gap-4 mb-6">
-        <span class="px-4 py-1 rounded-full border border-outline-variant/30 text-xs tracking-widest uppercase text-secondary">Interdisciplinar</span>
-        <span class="text-secondary tracking-widest text-xs uppercase">2025</span>
-      </div>
-      <h1 class="text-5xl md:text-8xl font-headline font-extrabold tracking-tighter text-white mb-8">Roupa Termorregulação Inteligente</h1>
-      <p class="text-xl md:text-2xl text-justify text-on-surface-variant max-w-2xl leading-relaxed">
-        Proposta estratégica para o desenvolvimento e lançamento de vestuário canino tecnológico, focada no bem-estar animal e assente em rigorosos modelos de economia circular e sustentabilidade.
-      </p>
-    </div>
-  </section>
+    <h1 class="text-5xl md:text-8xl font-headline font-extrabold tracking-tighter text-white mb-8">Roupa Termorregulação Inteligente</h1>
+    <p class="text-xl md:text-2xl text-justify text-on-surface-variant max-w-2xl leading-relaxed">
+      Proposta estratégica para o desenvolvimento e lançamento de vestuário canino tecnológico, focada no bem-estar animal e assente em rigorosos modelos de economia circular e sustentabilidade.
+    </p>
+  </div>
+</section>
 
   <!-- O Desafio -->
   <section class="py-32 px-12 bg-surface-container-low">
@@ -170,7 +173,7 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Roupa canina termorreguladora em protótipo" src="Imagens/Trabalhos académicos/Roupa cão/roupa cao.png">
 </div>
 <div class="md:col-span-8 glass-card rounded-xl overflow-hidden group">
-<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Desenho da roupa canina termorreguladora" src="Imagens/Trabalhos académicos/Roupa cão/roupa desenho.png">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Desenho da roupa canina termorreguladora" src="Imagens/Trabalhos académicos/Roupa cão/roupa desenho.png">
         </div>
       </div>
     </div>
@@ -194,8 +197,42 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
   </div>
 </footer>
 
-<div class="fixed right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-zinc-900 rounded-full overflow-hidden hidden lg:block">
-  <div class="w-full bg-secondary" style="height:30%"></div>
+<div id="scroll-indicator" class="fixed right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-zinc-900 rounded-full overflow-hidden hidden lg:block">
+  <div id="scroll-progress" class="w-full bg-secondary transition-all duration-150" style="height:0%"></div>
 </div>
+
+<button id="toggle-scroll-indicator" onclick="toggleScrollIndicator()" class="fixed right-8 bottom-8 w-8 h-8 rounded-full bg-zinc-900 border border-zinc-700 hover:border-zinc-500 transition-all duration-300 hidden lg:flex items-center justify-center" title="Toggle scroll indicator">
+  <span class="w-1 h-3 bg-secondary rounded-full block"></span>
+</button>
+
+<script>
+  const bar = document.getElementById('scroll-indicator');
+  const fill = document.getElementById('scroll-progress');
+  const btn = document.getElementById('toggle-scroll-indicator');
+  let enabled = true;
+
+  window.addEventListener('scroll', () => {
+    if (!enabled) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    fill.style.height = progress + '%';
+  });
+
+  function toggleScrollIndicator() {
+    enabled = !enabled;
+    bar.style.opacity = enabled ? '1' : '0';
+    btn.style.borderColor = enabled ? '' : '#ef4444';
+    fill.style.height = '0%';
+    localStorage.setItem('scrollIndicator', enabled ? 'on' : 'off');
+  }
+
+  const saved = localStorage.getItem('scrollIndicator');
+  if (saved === 'off') {
+    enabled = false;
+    bar.style.opacity = '0';
+    btn.style.borderColor = '#ef4444';
+  }
+</script>
 </body>
 </html>

@@ -78,6 +78,10 @@ tailwind.config = {
 body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5; }
 .glass-card { background: rgba(38,38,38,0.4); backdrop-filter: blur(20px); border: 1px solid rgba(72,72,72,0.15); }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+
+/* Esconde barra de scroll nativa */
+html { scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
 </style>
 </head>
 <body class="bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary">
@@ -104,7 +108,6 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
   <a href="contacto.html" class="text-zinc-300 hover:text-white text-sm font-medium">Contacto</a>
 </div>
 
-<main class="pt-24">
   <!-- Hero -->
   <section class="relative min-h-[70vh] flex flex-col justify-end px-12 pb-24 overflow-hidden">
     <div class="absolute inset-0 z-0">
@@ -170,7 +173,7 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
 <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Detalhe visual de ovos doces Fabridoce" src="Imagens/Trabalhos académicos/Fabridoce/ovos.png">
 </div>
 <div class="md:col-span-8 glass-card rounded-xl overflow-hidden group">
-<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="Fotografia de embalagem e produção da Fabridoce" src="Imagens/Trabalhos académicos/Fabridoce/fabricar.png">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" alt="Fotografia de embalagem e produção da Fabridoce" src="Imagens/Trabalhos académicos/Fabridoce/fabricar.png">
         </div>
       </div>
     </div>

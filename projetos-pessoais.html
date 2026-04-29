@@ -81,6 +81,8 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
 .aspect-1-1 { aspect-ratio: 1/1; }
 .aspect-4-5 { aspect-ratio: 4/5; }
 @media (max-width: 768px) { .custom-grid { grid-template-columns: 1fr; } }
+html { scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
 </style>
 </head>
 
@@ -149,36 +151,36 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
     </div>
   </section>
 
-  <!-- Masonry Grid -->
-  <section class="py-32 px-12 bg-black">
-    <div class="max-w-7xl mx-auto">
-      <div class="custom-grid">
-        <!-- Procuro Um Lar (1:1) -->
-        <div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-1-1 cursor-pointer transition-all duration-500 hover:scale-[1.02]">
-          <img class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700"
-            src="Imagens/Projetos%20pessoais/Procuro%20um%20Lar%20LOGO.jpg" alt="Procuro Um Lar">
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-          <div class="absolute bottom-0 left-0 p-8 w-full">
-            <span class="text-[10px] text-primary uppercase tracking-widest font-bold">Logo</span>
-            <h3 class="text-2xl font-headline font-bold text-white mt-2">Procuro Um Lar</h3>
-            <p class="text-on-surface-variant text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Identidade visual para plataforma de adoção animal.</p>
-          </div>
+<!-- Masonry Grid -->
+<section class="py-32 px-12 bg-black">
+  <div class="max-w-7xl mx-auto">
+    <div class="custom-grid">
+      <!-- Procuro Um Lar (1:1) -->
+      <div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-1-1">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-500 group-hover:scale-105"
+          src="Imagens/Projetos%20pessoais/Procuro%20um%20Lar%20LOGO.jpg" alt="Procuro Um Lar">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8 w-full">
+          <span class="text-[10px] text-primary uppercase tracking-widest font-bold">Logo</span>
+          <h3 class="text-2xl font-headline font-bold text-white mt-2">Procuro Um Lar</h3>
+          <p class="text-on-surface-variant text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Identidade visual para plataforma de adoção animal.</p>
         </div>
+      </div>
 
-        <!-- Sebastião (4:5) -->
-        <div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-4-5 cursor-pointer transition-all duration-500 hover:scale-[1.02] md:mt-12">
-          <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-all duration-700"
-            src="Imagens/Projetos%20pessoais/Gemini_Generated_Image_a0i0hka0i0hka0i0.png" alt="Sebastião">
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-          <div class="absolute bottom-0 left-0 p-8">
-            <span class="text-[10px] text-primary uppercase tracking-widest font-bold">Post</span>
-            <h3 class="text-3xl font-headline font-bold text-white mt-2">Sebastião</h3>
-            <p class="text-on-surface-variant text-sm mt-2">Criação de um post para partilha nas redes sociais.</p>
-          </div>
+      <!-- Sebastião (4:5) -->
+      <div class="group relative overflow-hidden rounded-xl bg-surface-container aspect-4-5 md:mt-12">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-all duration-500 group-hover:scale-105"
+          src="Imagens/Projetos%20pessoais/Gemini_Generated_Image_a0i0hka0i0hka0i0.png" alt="Sebastião">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8">
+          <span class="text-[10px] text-primary uppercase tracking-widest font-bold">Post</span>
+          <h3 class="text-3xl font-headline font-bold text-white mt-2">Sebastião</h3>
+          <p class="text-on-surface-variant text-sm mt-2">Criação de um post para partilha nas redes sociais.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 </div><!-- fim do flex-1 -->
 
@@ -191,9 +193,42 @@ body { font-family: 'Inter', sans-serif; background-color: #000; color: #e5e5e5;
 </footer>
 
 <!-- Scroll Indicator -->
-<div class="fixed right-6 top-1/2 -translate-y-1/2 h-32 w-px bg-zinc-800 hidden lg:block">
-  <div class="absolute top-0 w-full bg-secondary h-1/3 shadow-[0_0_10px_rgba(155,158,163,0.5)]"></div>
+<div id="scroll-indicator" class="fixed right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-zinc-900 rounded-full overflow-hidden hidden lg:block">
+  <div id="scroll-progress" class="w-full bg-secondary transition-all duration-150" style="height:0%"></div>
 </div>
 
+<button id="toggle-scroll-indicator" onclick="toggleScrollIndicator()" class="fixed right-8 bottom-8 w-8 h-8 rounded-full bg-zinc-900 border border-zinc-700 hover:border-zinc-500 transition-all duration-300 hidden lg:flex items-center justify-center" title="Toggle scroll indicator">
+  <span class="w-1 h-3 bg-secondary rounded-full block"></span>
+</button>
+
+<script>
+  const bar = document.getElementById('scroll-indicator');
+  const fill = document.getElementById('scroll-progress');
+  const btn = document.getElementById('toggle-scroll-indicator');
+  let enabled = true;
+
+  window.addEventListener('scroll', () => {
+    if (!enabled) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    fill.style.height = progress + '%';
+  });
+
+  function toggleScrollIndicator() {
+    enabled = !enabled;
+    bar.style.opacity = enabled ? '1' : '0';
+    btn.style.borderColor = enabled ? '' : '#ef4444';
+    fill.style.height = '0%';
+    localStorage.setItem('scrollIndicator', enabled ? 'on' : 'off');
+  }
+
+  const saved = localStorage.getItem('scrollIndicator');
+  if (saved === 'off') {
+    enabled = false;
+    bar.style.opacity = '0';
+    btn.style.borderColor = '#ef4444';
+  }
+</script>
 </body>
 </html>
