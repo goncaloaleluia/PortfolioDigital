@@ -87,6 +87,13 @@ body {
 }
 .glass-card { background: rgba(38,38,38,0.4); backdrop-filter: blur(12px); border: 1px solid rgba(72,72,72,0.15); }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+
+/* Esconde barra de scroll nativa */
+html { scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+.img-square { aspect-ratio: 1/1; }
+.img-portrait { aspect-ratio: 1080/1350; }
+.img-tall { aspect-ratio: 1080/1950; }
 </style>
 </head>
 <body class="bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary">
@@ -209,13 +216,11 @@ body {
   </div>
 </footer>
 
+</script>
 <div id="scroll-indicator" class="fixed right-4 top-1/2 -translate-y-1/2 w-1 h-32 bg-zinc-900 rounded-full overflow-hidden hidden lg:block">
   <div id="scroll-progress" class="w-full bg-secondary transition-all duration-150" style="height:0%"></div>
 </div>
 
-<button id="toggle-scroll-indicator" onclick="toggleScrollIndicator()" class="fixed right-8 bottom-8 w-8 h-8 rounded-full bg-zinc-900 border border-zinc-700 hover:border-zinc-500 transition-all duration-300 hidden lg:flex items-center justify-center" title="Toggle scroll indicator">
-  <span class="w-1 h-3 bg-secondary rounded-full block"></span>
-</button>
 
 <script>
   const bar = document.getElementById('scroll-indicator');
